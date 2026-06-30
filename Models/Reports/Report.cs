@@ -31,7 +31,7 @@ abstract class Report
             if (value <= DateTime.Now && value >= new DateTime(2020, 1, 1))
                 _timestamp = value;
             else
-                throw new ArgumentException("Invalid Report Status");
+                throw new ArgumentException("Invalid Report Timestamp");
         }
     }
 
@@ -42,7 +42,7 @@ abstract class Report
             if (value >= 29.5 && value <= 33.5)
                 _latitude = value;
             else
-                throw new ArgumentException("Invalid Report Status");
+                throw new ArgumentException("Invalid Report Latitude");
         }
     }
 
@@ -53,7 +53,7 @@ abstract class Report
             if (value >= 34.0 && value <= 36.0)
                 _longitude = value;
             else
-                throw new ArgumentException("Invalid Report Status");
+                throw new ArgumentException("Invalid Report Longitude");
         }
      }
 
@@ -65,7 +65,7 @@ abstract class Report
             if (value.Length >= 10 && value.Length <= 500)
                 _description = value;
             else
-                throw new ArgumentException("Invalid Report Status");
+                throw new ArgumentException("Invalid Report Description");
         }
     }
 
