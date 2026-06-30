@@ -10,7 +10,7 @@ class SoldierReport : Report
     private string _unit;
     private int _confidenceLevel;
 
-    string SoldierName
+    public string SoldierName
     {
         get => _soldierName;
         set
@@ -22,7 +22,7 @@ class SoldierReport : Report
         }
     }
 
-    string SoldierID
+    public string SoldierID
     {
         get => _soldierID;
         set
@@ -34,7 +34,7 @@ class SoldierReport : Report
         }
     }
 
-    string Unit
+    public string Unit
     {
         get => _unit;
         set
@@ -46,7 +46,7 @@ class SoldierReport : Report
         }
     }
 
-    int ConfidenceLevel
+    public int ConfidenceLevel
     {
         get => _confidenceLevel;
         set

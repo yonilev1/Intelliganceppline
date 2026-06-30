@@ -8,7 +8,7 @@ class DroneReport: Report
     private int _altitude;
     private int _imageQuality;
 
-    int Altitude
+    public int Altitude
     {
         get => _altitude;
         set
@@ -20,7 +20,7 @@ class DroneReport: Report
         }
     }
 
-    int ImageQuality
+    public int ImageQuality
     {
         get => _imageQuality;
         set

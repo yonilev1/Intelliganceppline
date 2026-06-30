@@ -9,39 +9,33 @@ class RadarReport : Report
     private int _direction;
     private int _distance;
 
-    int Speed
+    public int Speed
     {
         get => _speed;
         set
         {
             if (value >= 0 && value <= 2000)
                 _speed = value;
-            else
-                throw new ArgumentException("Invalid RadarReport Speed");
         }
     }
 
-    int Direction
+    public int Direction
     {
         get => _direction;
         set
         {
             if (value >= 0 && value <= 359)
                 _direction = value;
-            else
-                throw new ArgumentException("Invalid RadarReport Direction");
         }
     }
 
-    int Distance
+    public int Distance
     {
         get => _distance;
         set
         {
             if (value >= 100 && value <= 100000)
                 _distance = value;
-            else
-                throw new ArgumentException("Invalid RadarReport Distance");
         }
     }
 
