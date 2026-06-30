@@ -30,6 +30,8 @@ abstract class Report
         {
             if (value <= DateTime.Now && value >= new DateTime(2020, 1, 1))
                 _timestamp = value;
+            else
+                throw new ArgumentException("Invalid Report Status");
         }
     }
 
@@ -39,6 +41,8 @@ abstract class Report
         {
             if (value >= 29.5 && value <= 33.5)
                 _latitude = value;
+            else
+                throw new ArgumentException("Invalid Report Status");
         }
     }
 
@@ -48,6 +52,8 @@ abstract class Report
         {
             if (value >= 34.0 && value <= 36.0)
                 _longitude = value;
+            else
+                throw new ArgumentException("Invalid Report Status");
         }
      }
 
@@ -58,6 +64,8 @@ abstract class Report
         {
             if (value.Length >= 10 && value.Length <= 500)
                 _description = value;
+            else
+                throw new ArgumentException("Invalid Report Status");
         }
     }
 
@@ -93,11 +101,39 @@ abstract class Report
         }
     }
 
-    public string RejectionReason {
+    public string? RejectionReason {
         get => _rejectionReason;
         set
         {
             _rejectionReason = value;
         }
+    }
+
+    protected Report(int reportId, DateTime timestamp, double latitude, double longitude, string description)
+    {
+        ReportId = reportId;
+        Timestamp = timestamp;
+        Latitude = latitude;
+        Longitude = longitude;
+        Description = description;
+        Status = ReportStatus.New;
+        //To-Do
+        //Classification = calculate
+        //Priority = calculate
+        ReliabilityScore = CalculateReliabilityScore();
+        RejectionReason = null;
+    }
+
+    public abstract string GetSourceType();
+    public abstract int CalculateReliabilityScore();
+
+    public virtual string GetSummary()
+    {
+        return $"Report Id: {ReportId} | Status: {Status}";
+    }
+
+    public override string ToString()
+    {
+        return $"Report Id: {ReportId} | Time Stamp: {Timestamp} | Latitude: {Latitude} | Longitude: {Longitude} | Status: {Status}";
     }
 }
