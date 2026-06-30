@@ -1,3 +1,5 @@
+namespace IntelligencePipeline.Models.Enums;
+
 public enum Priority
 {
     Low,
