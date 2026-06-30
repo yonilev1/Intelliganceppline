@@ -11,24 +11,18 @@ class DroneReport: Report
     public int Altitude
     {
         get => _altitude;
-        set
+        protected set
         {
-            if (value >= 100 && value <= 10000)
                 _altitude = value;
-            else
-                throw new ArgumentException("Invalid DroneReport Altitude");
         }
     }
 
     public int ImageQuality
     {
         get => _imageQuality;
-        set
+        protected set
         {
-            if (value >= 100 && value <= 10000)
                 _imageQuality = value;
-            else
-                throw new ArgumentException("Invalid DroneReport ImageQuality");
         }
     }
 

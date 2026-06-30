@@ -14,10 +14,11 @@ abstract class Report
     private Priority _priority;
     private Classification _classification;
     private int _reliabilityScore;
-    private string _rejectionReason;
+    private string? _rejectionReason;
 
-    public int ReportId { get => _reportId;
-        private set
+    public int ReportId { 
+        get => _reportId;
+        protected set
         {
             _reportId = value;
         }
@@ -26,52 +27,40 @@ abstract class Report
     public DateTime Timestamp
     {
         get => _timestamp;
-        set
+        protected set
         {
-            if (value <= DateTime.Now && value >= new DateTime(2020, 1, 1))
-                _timestamp = value;
-            else
-                throw new ArgumentException("Invalid Report Timestamp");
+           _timestamp = value;
         }
     }
 
     public double Latitude { 
         get => _latitude;
-        set
+        protected set
         {
-            if (value >= 29.5 && value <= 33.5)
                 _latitude = value;
-            else
-                throw new ArgumentException("Invalid Report Latitude");
         }
     }
 
     public double Longitude {
         get => _longitude;
-        set
+        protected set
         {
-            if (value >= 34.0 && value <= 36.0)
                 _longitude = value;
-            else
-                throw new ArgumentException("Invalid Report Longitude");
         }
      }
 
     public string Description
     {
         get => _description;
-        set
+        protected set
         {
-            if (value.Length >= 10 && value.Length <= 500)
                 _description = value;
-            else
-                throw new ArgumentException("Invalid Report Description");
         }
     }
 
     public ReportStatus Status { 
         get => _status;
-        set
+        protected set
         {
             _status = value;
         }
@@ -79,7 +68,7 @@ abstract class Report
 
     public Priority Priority { 
         get => _priority;
-        set 
+        protected set
         {
             _priority = value;
         }
@@ -87,7 +76,7 @@ abstract class Report
 
     public Classification Classification { 
         get => _classification;
-        set 
+        protected set
         {
             _classification = value;
         }
@@ -95,15 +84,16 @@ abstract class Report
 
     public int ReliabilityScore { 
         get => _reliabilityScore;
-        private set 
+        protected set
         {
             _reliabilityScore = value;
         }
     }
 
-    public string? RejectionReason {
+    public string? RejectionReason
+    {
         get => _rejectionReason;
-        set
+        protected set
         {
             _rejectionReason = value;
         }

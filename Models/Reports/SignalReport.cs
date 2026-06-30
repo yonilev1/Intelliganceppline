@@ -13,9 +13,8 @@ class SignalReport : Report
     public double Frequency
     {
         get => _frequency;
-        set
+        protected set
         {
-            if (value >= 1.0 && value <= 3000.0)
                 _frequency = value;
         }
     }
@@ -23,9 +22,8 @@ class SignalReport : Report
     public string Content
     {
         get => _content;
-        set
+        protected set
         {
-            if (value.Length >= 5 && value.Length <= 1000)
                 _content = value;
         }
     }
@@ -33,7 +31,7 @@ class SignalReport : Report
     public Language Language
     {
         get => _language;
-        set
+        protected set
         {
             _language = value;
         }
@@ -42,9 +40,8 @@ class SignalReport : Report
     public int SignalStrength
     {
         get => _signalStrength;
-        set
+        protected set
         {
-            if (value >= -120 && value <= 0)
                 _signalStrength = value;
         }
     }

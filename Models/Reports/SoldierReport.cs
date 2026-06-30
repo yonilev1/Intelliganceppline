@@ -13,48 +13,36 @@ class SoldierReport : Report
     public string SoldierName
     {
         get => _soldierName;
-        set
+        protected set
         {
-            if (value.Length >= 2 && value.Length <= 50)
                 _soldierName = value;
-            else
-                throw new ArgumentException("Invalid SoldierReport SoldierName");
         }
     }
 
     public string SoldierID
     {
         get => _soldierID;
-        set
+        protected set
         {
-            if (value.Length == 7 && value[0] != '0')
                 _soldierID = value;
-            else
-                throw new ArgumentException("Invalid SoldierReport SoldierID");
         }
     }
 
     public string Unit
     {
         get => _unit;
-        set
+        protected set
         {
-            if (value.Length >= 2 && value.Length <= 50)
                 _unit = value;
-            else
-                throw new ArgumentException("Invalid SoldierReport Unit");
         }
     }
 
     public int ConfidenceLevel
     {
         get => _confidenceLevel;
-        set
+        protected set
         {
-            if (value >= 1 && value <= 5)
                 _confidenceLevel = value;
-            else
-                throw new ArgumentException("Invalid SoldierReport ConfidenceLevel");
         }
     }
 

@@ -12,9 +12,8 @@ class RadarReport : Report
     public int Speed
     {
         get => _speed;
-        set
+        protected set
         {
-            if (value >= 0 && value <= 2000)
                 _speed = value;
         }
     }
@@ -22,9 +21,8 @@ class RadarReport : Report
     public int Direction
     {
         get => _direction;
-        set
+        protected set
         {
-            if (value >= 0 && value <= 359)
                 _direction = value;
         }
     }
@@ -32,9 +30,8 @@ class RadarReport : Report
     public int Distance
     {
         get => _distance;
-        set
+        protected set
         {
-            if (value >= 100 && value <= 100000)
                 _distance = value;
         }
     }
