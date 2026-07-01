@@ -11,8 +11,8 @@ abstract class Report
     private double _longitude;
     private string _description;
     private ReportStatus _status;
-    private Priority _priority;
-    private Classification _classification;
+    private Priority? _priority;
+    private Classification? _classification;
     private int _reliabilityScore;
     private string? _rejectionReason;
 
@@ -66,7 +66,7 @@ abstract class Report
         }
      }
 
-    public Priority Priority { 
+    public Priority? Priority { 
         get => _priority;
         protected set
         {
@@ -74,7 +74,7 @@ abstract class Report
         }
     }
 
-    public Classification Classification { 
+    public Classification? Classification { 
         get => _classification;
         protected set
         {
@@ -107,9 +107,8 @@ abstract class Report
         Longitude = longitude;
         Description = description;
         Status = ReportStatus.New;
-        //To-Do
-        //Classification = calculate
-        //Priority = calculate
+        Classification = null;
+        Priority = null;
         ReliabilityScore = CalculateReliabilityScore();
         RejectionReason = null;
     }
