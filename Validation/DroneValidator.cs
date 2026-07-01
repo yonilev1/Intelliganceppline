@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 class DroneValidator: BaseValidator
 {
+    //validate common, validate specific and return success or error message
     protected override ValidationResult ValidateSpecificFields(Report report)
     {
         ValidationResult commonValid = Validate(report);
@@ -24,6 +25,9 @@ class DroneValidator: BaseValidator
                 else
                     return ValidationResult.Failure("Invalid Altitude: must be between 100 - 10000");
             }
+            else
+                return ValidationResult.Failure("Invalid Report Type: must be Dron Report");
         }
+        return ValidationResult.Failure(commonValid.ErrorMessage);
     }
 }
