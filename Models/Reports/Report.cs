@@ -60,7 +60,7 @@ abstract class Report
 
     public ReportStatus Status { 
         get => _status;
-        protected set
+        set
         {
             _status = value;
         }
@@ -68,7 +68,7 @@ abstract class Report
 
     public Priority? Priority { 
         get => _priority;
-        protected set
+        set
         {
             _priority = value;
         }
@@ -76,7 +76,7 @@ abstract class Report
 
     public Classification? Classification { 
         get => _classification;
-        protected set
+        set
         {
             _classification = value;
         }
