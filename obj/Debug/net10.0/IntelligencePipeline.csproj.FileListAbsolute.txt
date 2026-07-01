@@ -1,0 +1,15 @@
+C:\Users\Yonil\IntelligencePipeline\obj\Debug\net10.0\IntelligencePipeline.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yonil\IntelligencePipeline\obj\Debug\net10.0\IntelligencePipeline.AssemblyInfoInputs.cache
+C:\Users\Yonil\IntelligencePipeline\obj\Debug\net10.0\IntelligencePipeline.AssemblyInfo.cs
+C:\Users\Yonil\IntelligencePipeline\obj\Debug\net10.0\IntelligencePipeline.csproj.CoreCompileInputs.cache
+C:\Users\Yonil\IntelligencePipeline\obj\Debug\net10.0\IntelligencePipeline.sourcelink.json
+C:\Users\Yonil\IntelligencePipeline\bin\Debug\net10.0\IntelligencePipeline.exe
+C:\Users\Yonil\IntelligencePipeline\bin\Debug\net10.0\IntelligencePipeline.deps.json
+C:\Users\Yonil\IntelligencePipeline\bin\Debug\net10.0\IntelligencePipeline.runtimeconfig.json
+C:\Users\Yonil\IntelligencePipeline\bin\Debug\net10.0\IntelligencePipeline.dll
+C:\Users\Yonil\IntelligencePipeline\bin\Debug\net10.0\IntelligencePipeline.pdb
+C:\Users\Yonil\IntelligencePipeline\obj\Debug\net10.0\IntelligencePipeline.dll
+C:\Users\Yonil\IntelligencePipeline\obj\Debug\net10.0\refint\IntelligencePipeline.dll
+C:\Users\Yonil\IntelligencePipeline\obj\Debug\net10.0\IntelligencePipeline.pdb
+C:\Users\Yonil\IntelligencePipeline\obj\Debug\net10.0\IntelligencePipeline.genruntimeconfig.cache
+C:\Users\Yonil\IntelligencePipeline\obj\Debug\net10.0\ref\IntelligencePipeline.dll

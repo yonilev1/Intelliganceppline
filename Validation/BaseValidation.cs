@@ -11,13 +11,13 @@ abstract class BaseValidator : IValidator
         ValidationResult commonChecks = ValidateCommonFields(report);
         if (commonChecks.IsValid)
         {
-            ValidationResult specificChecks = ValidateSpecificFields(report);
-            if (specificChecks.IsValid)
-            {
+            //ValidationResult specificChecks = ValidateSpecificFields(report);
+            //if (specificChecks.IsValid)
+            //{
                 return ValidationResult.Success();
-            }
-            else
-                return ValidationResult.Failure(specificChecks.ErrorMessage);
+            //}
+            //else
+            //    return ValidationResult.Failure(specificChecks.ErrorMessage);
         }
         return ValidationResult.Failure(commonChecks.ErrorMessage);
     }
@@ -49,5 +49,5 @@ abstract class BaseValidator : IValidator
             return ValidationResult.Failure("Invalid Timestamp: must be between 1.1.20 - Now");
     }
 
-    protected abstract ValidationResult ValidateSpecificFields(Report report);
+    public abstract ValidationResult ValidateSpecificFields(Report report);
 }

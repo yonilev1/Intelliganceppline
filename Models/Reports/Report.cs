@@ -84,7 +84,7 @@ abstract class Report
 
     public int ReliabilityScore { 
         get => _reliabilityScore;
-        protected set
+        set
         {
             _reliabilityScore = value;
         }
@@ -124,5 +124,10 @@ abstract class Report
     public override string ToString()
     {
         return $"Report Id: {ReportId} | Time Stamp: {Timestamp} | Latitude: {Latitude} | Longitude: {Longitude} | Status: {Status}";
+    }
+
+    public void setRejectionReason(string rejectionError)
+    {
+        RejectionReason = rejectionError;
     }
 }

@@ -37,7 +37,7 @@ class PriorityCalculator
     {
         foreach (string word in keywords)
         {
-            if (text.Contains(word))
+            if (text.Contains(word, StringComparison.OrdinalIgnoreCase))
                 return true;
         }
         return false;

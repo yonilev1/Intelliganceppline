@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 class RadarValidator : BaseValidator
 {
     //validate common, validate specific and return success or error message
-    protected override ValidationResult ValidateSpecificFields(Report report)
+    public override ValidationResult ValidateSpecificFields(Report report)
     {
         ValidationResult commonValid = Validate(report);
         if (commonValid.IsValid)
